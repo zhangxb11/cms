@@ -18,7 +18,7 @@
                 </el-form-item>  
                 <!-- 按钮    -->
                 <el-form-item class="btn">
-                 <el-button type="primary" disabled>Login</el-button>
+                 <el-button type="primary" @click="login">Login</el-button>
                  <el-button type="info" @click="resetLoginForm">reset</el-button>
                 </el-form-item >
             </el-form>
@@ -33,7 +33,7 @@ export default {
         return{
             //登陆表单
             loginForm:{
-                username:'zxy444444',
+                username:'zxy',
                 password:'123'
             },
             //验证规则
@@ -50,9 +50,16 @@ export default {
         };
     },
     methods:{
-        resetLoginForm(){
-            
-        }
+    resetLoginForm(){
+            this.$refs.loginFormRef.resetFields();
+        },
+    login(){
+             this.$refs.loginFormRef.validate(valid => {
+                 if(!valid)return;
+                 return this.$message.success('登录成功');
+                 this.$router.push("/manager");
+             });
+    }    
     }
 };
 </script>
