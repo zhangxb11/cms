@@ -4,7 +4,8 @@ import  'element-ui/lib/theme-chalk/index.css'
 import Router from 'vue-router'
 import Login from './components/Login.vue'
 import manager from './components/manager.vue'
-import {Button,Form,FormItem,Input,Message,Container,Header,Aside,Main,Menu,Submenu,MenuItemGroup,MenuItem,Card}from 'element-ui'
+import {Button,Form,FormItem,Input,Message,Container,Header,Aside,Main,Menu,Submenu,MenuItemGroup,MenuItem,Card,Row,Col,Table,TableColumn
+,Pagination}from 'element-ui'
 import meetingsmanagement from './components/manager/meetingsmanagement.vue'
 import RequiredCourse from './components/manager/RequiredCourse.vue'
 import PublicCourses from './components/manager/PublicCourses.vue'
@@ -23,6 +24,11 @@ Vue.use(Submenu)
 Vue.use(MenuItem)
 Vue.use(MenuItemGroup)
 Vue.use(Card)
+Vue.use(Row)
+Vue.use(Col)
+Vue.use(Table)
+Vue.use(TableColumn)
+Vue.use(Pagination)
 Vue.prototype.$message = Message
 
 Vue.use(Router)
