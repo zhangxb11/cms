@@ -55,9 +55,10 @@ export default {
         },
     login(){
              this.$refs.loginFormRef.validate(valid => {
+                 this.$router.push("/manager");
                  if(!valid)return;
                  return this.$message.success('登录成功');
-                 this.$router.push("/manager");
+                 
              });
     }    
     }
